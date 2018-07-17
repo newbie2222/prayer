@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-navbar color="primary">
+       <ion-buttons left>
+             <button ion-button menuToggle>
+               <ion-icon name="menu"></ion-icon>
+             </button>
+           </ion-buttons>
+           <ion-buttons right>
+             <button ion-button (click)="presentPopover($event)">
+                 <ion-icon name="more"></ion-icon></button>
+             
+             <!-- <ion-input *ngIf="buttonClicked" type="text" value=""></ion-input>
+               <ion-icon name="more"></ion-icon> -->
+            
+           </ion-buttons>
+           <!--- (click)="onButtonClick()"  (click)="presentPrompt()" -->
+       <ion-title>Profile</ion-title>
+     </ion-navbar>
+   </ion-header>
+   <ion-content padding>
+  
+  <ion-card  class="contentList" text-center style >
+      <ion-card-content>
+          <img align="center" class="logo" src = "assets/img/cover.png" style="width: 95%;padding-left:20px;"/>
+          <br>
+          <br>
+            <ion-item >
+                <!-- *ngFor="let agents of agentProfile" -->
+                <!-- {{agents.companyName}} -->
+                <form (ngSubmit)="saveUser()">
+              <h6><b>Name:<ion-input type="email" [(ngModel)]="user.name" name="name"></ion-input></b></h6>
+              <h6><b>Ic Number:<ion-input type="text" [(ngModel)]="user.ic" name="ic"></ion-input></b></h6>
+              <h6><b>Email:<ion-input type="text" [(ngModel)]="user.email" name="email"></ion-input></b></h6>
+              <h6><b>Phone Number:<ion-input type="text" [(ngModel)]="user.phone" name="phone"></ion-input></b></h6>
+              <button ion-button type="submit" block>Save</button>
+            </form>
+            </ion-item>
+        </ion-card-content>  
+    </ion-card>
+  </ion-content>
+  

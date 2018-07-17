@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="danger">
+     <ion-buttons left>
+           <button ion-button menuToggle>
+             <ion-icon name="menu"></ion-icon>
+           </button>
+         </ion-buttons>
+         <ion-buttons right>
+           <button ion-button (click)="presentPopover($event)">
+               <ion-icon name="more"></ion-icon></button>
+         </ion-buttons>
+         <!--- (click)="onButtonClick()"  (click)="presentPrompt()" -->
+     <ion-title>Membaca Al-Quran</ion-title>
+   </ion-navbar>
+ </ion-header>
+ <ion-content >
+    <ion-list>
+        <ion-card>
+          <ion-grid>
+            <form  (ngSubmit)="saveData()">
+            <div class="row" >
+              <div class="col">Surah Al-Mulk 
+              <div class="row">Tadarus<div class="col"><button (click) = "zikir2()">Simpan</button></div></div>
+              <div class="row">Tadabur <div class="col"><button (click) = "zikir2()">Simpan</button></div></div></div>
+              <!-- <div class="col"><ion-input placeholder="Text Input" type="text"></ion-input></div>
+              <div class="col"><button>Simpan</button></div> -->
+               </div>
+               <div class="row" >
+                <div class="col">Surah Yaasin
+                    <div class="row">Tadarus<div class="col"><button (click) = "zikir2()">Simpan</button></div></div>
+                    <div class="row">Tadabur <div class="col"><button (click) = "zikir2()">Simpan</button></div></div></div>
+                <!-- <div class="col"><ion-input placeholder="Text Input" type="text"></ion-input></div>
+                <div class="col"><button>Simpan</button></div> -->
+                 </div>
+                 <div class="row" >
+                  <div class="col">Lain-lain Surah
+                      <div class="row">Tadarus<div class="col"><button (click) = "zikir2()">Simpan</button></div></div>
+                      <div class="row">Tadabur <div class="col"><button (click) = "zikir2()">Simpan</button></div></div></div>
+                  <!-- <div class="col"><ion-input placeholder="Text Input" type="text"></ion-input></div>
+                  <div class="col"><button>Simpan</button></div> -->
+                   </div> 
+                    <ion-item>
+                    <!-- <ion-label>Date</ion-label>
+                    <ion-datetime displayFormat="MM/DD/YYYY"  name="date" required=""></ion-datetime> -->
+                    <!-- [(ngModel)]="data.date1" -->
+                  </ion-item>
+                  <!-- <ion-item>
+                    <ion-label>al-quran</ion-label>
+                    <ion-input type="number" placeholder="al1" [(ngModel)]="data1.al1" name="al1" required="" ></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>surah</ion-label>
+                    <ion-input type="number" placeholder="al2" [(ngModel)]="data1.al2" name="al2" required="" ></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label>Amount</ion-label>
+                    <ion-input type="number" placeholder="al3" [(ngModel)]="data1.al3" name="al3" required="" ></ion-input>
+                  </ion-item>
+                   <div class="row" >
+                   <button ion-button type="submit" block>Save Data</button>
+                   <ion-label>{{data1.al1}}</ion-label>
+                   <ion-label>{{data1.al2}}</ion-label>
+                   <ion-label>{{data1.al3}}</ion-label>
+
+                  </div> -->
+    </form>
+          </ion-grid>
+          <ion-label>{{data1.al1}}</ion-label>
+        </ion-card>
+        
+      </ion-list>
+  </ion-content>

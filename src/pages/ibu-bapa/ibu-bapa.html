@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="danger">
+     <ion-buttons left>
+           <button ion-button menuToggle>
+             <ion-icon name="menu"></ion-icon>
+           </button>
+         </ion-buttons>
+         <ion-buttons right>
+           <button ion-button (click)="presentPopover($event)">
+               <ion-icon name="more"></ion-icon></button>
+           
+           <!-- <ion-input *ngIf="buttonClicked" type="text" value=""></ion-input>
+             <ion-icon name="more"></ion-icon> -->
+          
+         </ion-buttons>
+         <!--- (click)="onButtonClick()"  (click)="presentPrompt()" -->
+     <ion-title>Ibu Bapa</ion-title>
+   </ion-navbar>
+ </ion-header>
+ <ion-content >
+    <ion-list>
+        <ion-card>
+          <ion-grid>
+            <form (ngSubmit)="saveData()">
+                <ion-item>
+            <div class="row" >
+              <div class="col">Menghubungi</div>
+                  <div class="col"><button (click) = " menghubungi()">Selesai</button></div>
+               </div>
+               <div class="row" >
+                <div class="col">Hadiahkan Al-Fatihah</div>
+                <div class="col"><button (click) = "fatihah()">Selesai</button></div>
+                 </div>
+                 <div class="row" >
+                  <div class="col">Hadiahkan Al-Ikhlas</div>
+                  <div class="col"><button (click) = " alikhlas()">Selesai</button></div>
+                   </div>
+                   <!-- <div class="row" >
+                    <button ion-button type="submit" block>Save Data</button></div> -->
+                   </ion-item>
+                  </form>
+          </ion-grid>
+        </ion-card>
+        
+      </ion-list>
+  </ion-content>
+
+  <!-- <ion-content padding>
+    <h2>Add Data</h2>
+    <form (ngSubmit)="saveData()">
+      <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="data.date" name="date" required=""></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-select [(ngModel)]="data.type" name="type" required="">
+          <ion-option value="Income">Income</ion-option>
+          <ion-option value="Expense">Expense</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-input type="text" placeholder="Description" [(ngModel)]="data.description" name="description" required="" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Amount</ion-label>
+        <ion-input type="number" placeholder="Amount" [(ngModel)]="data.amount" name="amount" required="" ></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block>Save Data</button>
+    </form>
+  </ion-content> -->

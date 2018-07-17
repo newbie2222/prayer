@@ -1,0 +1,94 @@
+<ion-content padding class="background">
+  <div class="bodypart">
+  <img src="assets/img/coverLogo.png" style="width: 60%;" class="logo" margin-top>
+  <ion-card style="margin-top:25px;">
+    <ion-segment [(ngModel)]="forms" style="background: #e78ab7;" class="md">
+      <ion-segment-button value="loginForm">
+        <!--Login-->
+        <span style="color: #fff;">Login</span>
+      </ion-segment-button>
+      <ion-segment-button value="registerForm">
+        <!--Register-->
+        <span style="color: #fff;">Register</span>
+      </ion-segment-button>
+    </ion-segment>
+
+    <div [ngSwitch]="forms">
+      <form class="loginForm" align="center" *ngSwitchCase="'loginForm'">
+        <ion-item>
+          <ion-label floating >Email</ion-label>
+          <ion-input text-lowercase [(ngModel)]="user.email" name="email" type="email"></ion-input>
+        </ion-item>
+        <div *ngIf="login.get('email').hasError('required') && login.get('email').touched">
+          <p >Enter a valid email</p>
+        </div>
+        <div *ngIf="login.get('email').hasError('pattern') && login.get('email').touched">
+          <p>Email format should be <i>joe@abc.com</i></p>
+        </div>
+      
+       <ion-item>
+          <ion-label floating >Password</ion-label>
+          <ion-input type="password" maxlength="16" [(ngModel)]="user.password" name="password" ></ion-input>
+        </ion-item>
+         <div *ngIf="login.get('password').hasError('required') && login.get('password').touched">
+          <p>Enter password</p>
+        </div>
+        <div *ngIf="login.get('password').hasError('pattern') && login.get('password').touched">
+          <p>Must be at least 8 characters</p>
+        </div>
+        <div padding>
+          <button class="loginButton" full ion-button type="submit" >Login</button>
+        </div>
+        <!-- <div> 
+             <button ion-button color="light" clear (tap)="forgotPassword()"> -->
+              <span style="color:#fff">Forgot Password?</span>
+            <!-- </button>
+        </div> -->
+      </form>
+      
+      
+      <form  class="registerForm" align="center" *ngSwitchCase="'registerForm'">
+        
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input text-lowercase   type="email" ></ion-input>
+        </ion-item>
+        <!-- <div *ngIf="register.get('email').hasError('required') && register.get('email').touched">
+          <p>Enter a valid email</p>
+        </div>
+        <div *ngIf="register.get('email').hasError('pattern') && register.get('email').touched">
+          <p>Email format should be <i>joe@abc.com</i></p>
+        </div> -->
+
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input  type="password" maxlength="16" > </ion-input>
+        </ion-item>
+        <!-- <div *ngIf="register.get('password').hasError('required') && register.get('password').touched">
+          <p>Enter password</p>
+        </div>
+        <div *ngIf="register.get('password').hasError('pattern') && register.get('password').touched">
+          <p>Use at least 8 characters and must contain  <br> combination of upper case, lower case and number</p>
+        </div> -->
+
+        <ion-item>
+          <ion-label floating>Confirm Password</ion-label>
+          <ion-input  type="password" maxlength="16"  > </ion-input>
+        </ion-item>
+         <!-- <div *ngIf="register.get('confirmPassword').hasError('required') && register.get('confirmPassword').touched">
+          <p>Re-enter password</p>
+        </div>  
+        <div *ngIf="register.get('confirmPassword').hasError('MatchPassword') && register.get('confirmPassword').touched">
+          <p>Password not match</p>
+        </div>
+         -->
+        <br>
+        <div padding>
+          <button class="loginButton" full ion-button type="submit" >Register</button>
+        </div>
+      </form>
+    </div>
+  </ion-card>
+
+</div>
+</ion-content>

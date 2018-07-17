@@ -1,0 +1,122 @@
+<ion-header>
+    <ion-navbar color="danger">
+       <ion-buttons left>
+             <button ion-button menuToggle>
+               <ion-icon name="menu"></ion-icon>
+             </button>
+           </ion-buttons>
+           <ion-buttons right>
+             <button ion-button (click)="presentPopover($event)">
+                 <ion-icon name="more"></ion-icon></button>
+             
+             <!-- <ion-input *ngIf="buttonClicked" type="text" value=""></ion-input>
+               <ion-icon name="more"></ion-icon> -->
+            
+           </ion-buttons>
+           <!--- (click)="onButtonClick()"  (click)="presentPrompt()" -->
+       <ion-title>Non Muslim</ion-title>
+     </ion-navbar>
+   </ion-header>
+   <ion-content >
+      <ion-list>
+          <ion-card>
+            <ion-grid>
+              <form (ngSubmit)="saveData()">
+                  <ion-item>
+              <div class="row" >
+                <div class="col">Bersalaman/Menghubungi parents</div>
+                    <div class="col"><button (click) ="non_salam()">Selesai</button></div>
+                 </div>
+              <div class="row" >
+                  <div class="col">Greetings</div>
+             <div class="col"><button (click) ="non_greetings()">Selesai</button></div>
+                   </div>
+                   <div class="row" >
+                    <div class="col">Membantu</div>
+             <div class="col"><button (click) ="non_membantu()" >Selesai</button></div>
+                     </div>
+                     <div class="row" >
+                        <div class="col">Salam,Senyum,Sapa</div>
+                        <div class="col"><button (click) =" non_senyum()">Selesai</button></div>
+                         </div>
+                         <div class="row" >
+                            <div class="col">Berkongsi Kemahiran</div>
+                            <div class="col"><button (click) ="non_berkongsi()">Selesai</button></div>
+                             </div>
+                             <div class="row" >
+                                <div class="col">Jumpa lecturer/Guru</div>
+                                <div class="col"><button (click) ="non_jumpa()">Selesai</button></div>
+                                 </div>
+                                 <div class="row" >
+                                    <div class="col">Berpakaian Kemas</div>
+                                    <div class="col"><button (click) ="non_kemas()">Selesai</button></div>
+                                     </div>
+                                     <div class="row" >
+                                        <div class="col">Menepati Waktu</div>
+                                        <div class="col"><button (click) ="non_menepati()">Selesai</button></div>
+                                         </div>
+                                         <div class="row" >
+                                            <div class="col">Menghadiri majlis ilmu</div>
+                                            <div class="col"><button (click) ="non_ilmu()">Selesai</button></div>
+                                             </div>
+                                             <div class="row" >
+                                                <div class="col">Membaca</div>
+                                                <div class="col"><button (click) ="non_membaca()">Selesai</button></div>
+                                                 </div>
+                                                 <div class="row" >
+                                                    <div class="col">Muhasabah/Refleksi</div>
+                                                    <div class="col"><button (click) ="non_refleksi()" >Selesai</button></div>
+                                                     </div>
+                                                     <div class="row" >
+                                                        <div class="col">Beribadah</div>
+                                                        <div class="col"><button (click) ="non_beriadah()" >Selesai</button></div>
+                                                         </div>
+                                                         <div class="row" >
+                                                            <div class="col">Usaha melawan hawa nafsu</div>
+                                                            <div class="col"><button (click) ="non_usaha()">Selesai</button></div>
+                                                             </div>
+                                                             <div class="row" >
+                                                                <div class="col">Bertafakur</div>
+                                                                <div class="col"><button (click) ="non_bertakafur()">Selesai</button></div>
+                                                                 </div>
+                                                                 <div class="row" >
+                                                                    <div class="col">Berkelakuan baik</div>
+                                                                    <div class="col"><button (click) ="non_berkelakuan()">Selesai</button></div>
+                                                                     </div>
+                                                                     <div class="row" >
+                                                                        <div class="col">Volunteerism</div>
+                                                                        <div class="col"><button (click) ="non_volunteerism()">Selesai</button></div>
+                                                                         </div>
+                                                                         <div class="row" >
+                                                                            <div class="col">Menghormati orang lain</div>
+                                                                            <div class="col"><button (click) ="non_menghormati()">Selesai</button></div>
+                                                                             </div>
+                                                                             <div class="row" >
+                                                                                <div class="col">Jujur/Amanah</div>
+                                                                                <div class="col"><button (click) ="non_jujur()">Selesai</button></div>
+                                                                                 </div>
+                                                                                 <div class="row" >
+                                                                                    <div class="col">Menepati janji</div>
+                                                                                    <div class="col"><button (click) ="non_janji()">Selesai</button></div>
+                                                                                     </div>
+                                                                                     <div class="row" >
+                                                                                        <div class="col">Berkata-kata baik</div>
+                                                                                        <div class="col"><button (click) ="non_berkata()">Selesai</button></div>
+                                                                                         </div>
+                                                                                         <div class="row" >
+                                                                                            <div class="col">Mengulang kaji</div>
+                                                                                            <div class="col"><button (click) ="non_mengulang()">Selesai</button></div>
+                                                                                             </div>
+                                                                                             <div class="row" >
+                                                                                                <div class="col">Buat latihan</div>
+                                                                                                <div class="col"><button (click) ="non_buat()">Selesai</button></div>
+                                                                                                 </div>   
+                     </ion-item>
+                    </form>
+            </ion-grid>
+          </ion-card>
+          
+        </ion-list>
+    </ion-content>
+  
+  

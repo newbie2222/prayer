@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar color="danger">
+     <ion-buttons left>
+           <button ion-button menuToggle>
+             <ion-icon name="menu"></ion-icon>
+           </button>
+         </ion-buttons>
+         <ion-buttons right>
+           <button ion-button (click)="presentPopover($event)">
+               <ion-icon name="more"></ion-icon></button>
+           
+           <!-- <ion-input *ngIf="buttonClicked" type="text" value=""></ion-input>
+             <ion-icon name="more"></ion-icon> -->
+          
+         </ion-buttons>
+         <!--- (click)="onButtonClick()"  (click)="presentPrompt()" -->
+     <ion-title>Zikir</ion-title>
+   </ion-navbar>
+ </ion-header>
+ <ion-content >
+  <ion-list>
+      <ion-card>
+        <ion-grid>
+          
+          <div class="row" >
+            <div class="col">Berjemaah</div>
+           
+             </div>
+         <div class="row" >
+                <div class="col"><label>أَسْتَغْفِرُ اللّٰهَ</label></div>
+                <div class="col"><label>33 Kali</label></div>
+                <!-- <div class="col"><ion-input placeholder="Input" min="0" max="33"  type="text" ></ion-input></div> -->
+                <!-- [(ngModel)]="user.zikir1" -->
+                <div class="col"><button (click) = "zikir1()">Selesai</button></div>
+                </div>
+                <div class="row" >
+                <div class="col"><label>سُبْحَسُبْحَانَ اللّهُ </label></div>
+                <div class="col"><label>33 Kali</label></div>
+                <!-- <div class="col"><ion-input placeholder="Input" min="0" max="33" type="text" ></ion-input></div> -->
+                <div class="col"><button (click) = "zikir2()">Selesai</button></div>
+              </div>
+              <div class="row" >
+                <div class="col"><label> اَلْحَمْدُلِلّهِ </label></div>
+                <div class="col"><label>33 Kali</label></div>
+                <!-- <div class="col"><ion-input placeholder="Input" min="0" max="33" type="text" ></ion-input></div> -->
+                <div class="col"><button (click) = "zikir3()">Selesai</button></div>
+              </div>
+              <div class="row" >
+                <div class="col"><label>اَللّهُ اَكْبَرُ</label></div>
+                <div class="col"><label>33 Kali</label></div>
+                <!-- <div class="col"><ion-input placeholder="Input" min="0" max="33" type="text" ></ion-input></div> -->
+                <div class="col"><button (click) = "zikir4()">Selesai</button></div>
+              </div>
+              <div class="row" >
+                <div class="col"><label>لاَ هَوْلَ وَلاَ قُوَّتَ اِلاَّبِاللّهِ </label></div>
+                <div class="col"><label>33 Kali</label></div>
+                <!-- <div class="col"><ion-input placeholder="Input" min="0" max="33" type="text" ></ion-input></div> -->
+                <div class="col"><button (click) = "zikir5()">Selesai</button></div>
+                <div class="row" >
+                  </div>
+                    </div>
+        </ion-grid>
+      </ion-card>
+      
+    </ion-list>
+</ion-content>

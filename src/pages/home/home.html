@@ -1,0 +1,69 @@
+
+
+  <ion-header>
+    <ion-navbar color="danger">
+        <ion-buttons left>
+            <button ion-button menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+          </ion-buttons>
+      <ion-title>
+        My Activity
+      </ion-title>
+      
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <h2>Activity List</h2>
+    <ion-list>
+      <ion-item-sliding *ngFor="let expense of expenses; let i=index">
+        <ion-item nopadding>
+          <p>
+          <span>Al-Quran</span><br>Surah 1: {{expense.al1}}
+          </p>
+          <p>
+            <!-- <span>Ibu-Bapa</span><br>Menghubungi: {{expense.ibu1}}<br>Hadiahkan Fatihah:{{expense.ibu2}}
+            <br>
+            </p>
+            <p>
+              <span>Pensyarah</span><br>Memberi Salam: {{expense.pen1}}<br>Membantu:{{expense.pen2}}<br>Surah 3:{{expense.al3}}
+              <br>
+              </p>
+              <p>
+                <span>Rakan</span><br>Salam,Senyum,Sapa: {{expense.rak1}}<br>Berkongsi Kemahiran:{{expense.rak2}}
+                <br>
+                </p>
+                <p>
+                  <span>Solat-Rawatib</span><br>Solat-Rawatib: {{expense.ra}}
+                  <br>
+                  </p>
+                  <p>
+                      <span>Solat-Sunat</span><br>Solat Taubat: {{expense.su1}}<br>Solat Hajat:{{expense.su2}}<br>Solat Witir:{{expense.su3}}<br>Solat Dhuha:{{expense.su4}}<br>Solat Taubat:{{expense.su5}}
+                      <br>
+                      </p>
+                      <p>
+                          <span>Solat-Fadhu</span><br>Berjemaah: {{expense.far1}}<br>Waktu:{{expense.far2}}<br>
+                          <br>
+                          </p>
+                          <p>
+                          <span>Zikir</span><br>أَسْتَغْفِرُ اللّٰهَ: {{expense.zi1}}<br>سُبْحَسُبْحَانَ اللّهُ :{{expense.zi2}}<br>اَلْحَمْدُلِلّهِ:{{expense.zi3}}<br>اَللّهُ اَكْبَرُ:{{expense.zi4}}<br>لاَ هَوْلَ وَلاَ قُوَّتَ اِلاَّبِاللّهِ:{{expense.zi5}}
+                          <br>
+                          </p> -->
+</ion-item>
+        <!-- <ion-item-options side="right"> -->
+          <!-- <button ion-button color="primary" (click)="editData(expense.rowid)">
+            <ion-icon name="paper"></ion-icon>
+          </button>
+          <button ion-button color="danger" (click)="deleteData(expense.rowid)">
+            <ion-icon name="trash"></ion-icon>
+          </button> -->
+        <!-- </ion-item-options> -->
+      </ion-item-sliding>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+     
+    </ion-toolbar>
+  </ion-footer>
